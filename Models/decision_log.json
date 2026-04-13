@@ -1,0 +1,602 @@
+[
+  {
+    "episode": 0,
+    "timestamp": "2026-04-13T18:51:54.480985",
+    "anomaly_type": "congestion",
+    "anomaly_score": 0.0,
+    "action": "traffic_shaping",
+    "confidence": 0.1491,
+    "escalated": true,
+    "reward": 5.12,
+    "metrics_before": {
+      "latency": 30.0,
+      "loss": 2.5,
+      "throughput": 9.5
+    },
+    "metrics_after": {
+      "latency": 25.0,
+      "loss": 2.2,
+      "throughput": 9.5
+    }
+  },
+  {
+    "episode": 1,
+    "timestamp": "2026-04-13T18:51:54.483343",
+    "anomaly_type": "degradation",
+    "anomaly_score": 0.0,
+    "action": "traffic_shaping",
+    "confidence": 0.1491,
+    "escalated": true,
+    "reward": 5.12,
+    "metrics_before": {
+      "latency": 40.0,
+      "loss": 1.2,
+      "throughput": 7.5
+    },
+    "metrics_after": {
+      "latency": 35.0,
+      "loss": 0.9,
+      "throughput": 7.5
+    }
+  },
+  {
+    "episode": 2,
+    "timestamp": "2026-04-13T18:51:54.505965",
+    "anomaly_type": "link_failure",
+    "anomaly_score": 0.6723525503380431,
+    "action": "traffic_shaping",
+    "confidence": 1.0,
+    "escalated": false,
+    "reward": 5.12,
+    "metrics_before": {
+      "latency": 150.0,
+      "loss": 5.0,
+      "throughput": 2.0
+    },
+    "metrics_after": {
+      "latency": 145.0,
+      "loss": 4.7,
+      "throughput": 2.0
+    }
+  },
+  {
+    "episode": 3,
+    "timestamp": "2026-04-13T18:51:54.525874",
+    "anomaly_type": "congestion",
+    "anomaly_score": 0.6743588641194254,
+    "action": "traffic_shaping",
+    "confidence": 1.0,
+    "escalated": false,
+    "reward": 5.12,
+    "metrics_before": {
+      "latency": 30.0,
+      "loss": 2.5,
+      "throughput": 9.5
+    },
+    "metrics_after": {
+      "latency": 25.0,
+      "loss": 2.2,
+      "throughput": 9.5
+    }
+  },
+  {
+    "episode": 4,
+    "timestamp": "2026-04-13T18:51:54.540964",
+    "anomaly_type": "degradation",
+    "anomaly_score": 0.679607537581526,
+    "action": "traffic_shaping",
+    "confidence": 1.0,
+    "escalated": false,
+    "reward": 5.12,
+    "metrics_before": {
+      "latency": 40.0,
+      "loss": 1.2,
+      "throughput": 7.5
+    },
+    "metrics_after": {
+      "latency": 35.0,
+      "loss": 0.9,
+      "throughput": 7.5
+    }
+  },
+  {
+    "episode": 5,
+    "timestamp": "2026-04-13T18:51:54.555174",
+    "anomaly_type": "link_failure",
+    "anomaly_score": 0.6723525503380431,
+    "action": "traffic_shaping",
+    "confidence": 1.0,
+    "escalated": false,
+    "reward": 5.12,
+    "metrics_before": {
+      "latency": 150.0,
+      "loss": 5.0,
+      "throughput": 2.0
+    },
+    "metrics_after": {
+      "latency": 145.0,
+      "loss": 4.7,
+      "throughput": 2.0
+    }
+  },
+  {
+    "episode": 6,
+    "timestamp": "2026-04-13T18:51:54.568324",
+    "anomaly_type": "congestion",
+    "anomaly_score": 0.6743588641194254,
+    "action": "reroute",
+    "confidence": 0.1971,
+    "escalated": true,
+    "reward": 17.93,
+    "metrics_before": {
+      "latency": 30.0,
+      "loss": 2.5,
+      "throughput": 9.5
+    },
+    "metrics_after": {
+      "latency": 15.0,
+      "loss": 1.0,
+      "throughput": 11.5
+    }
+  },
+  {
+    "episode": 7,
+    "timestamp": "2026-04-13T18:51:54.582159",
+    "anomaly_type": "degradation",
+    "anomaly_score": 0.679607537581526,
+    "action": "traffic_shaping",
+    "confidence": 1.0,
+    "escalated": false,
+    "reward": 5.12,
+    "metrics_before": {
+      "latency": 40.0,
+      "loss": 1.2,
+      "throughput": 7.5
+    },
+    "metrics_after": {
+      "latency": 35.0,
+      "loss": 0.9,
+      "throughput": 7.5
+    }
+  },
+  {
+    "episode": 8,
+    "timestamp": "2026-04-13T18:51:54.595519",
+    "anomaly_type": "link_failure",
+    "anomaly_score": 0.6723525503380431,
+    "action": "traffic_shaping",
+    "confidence": 1.0,
+    "escalated": false,
+    "reward": 5.12,
+    "metrics_before": {
+      "latency": 150.0,
+      "loss": 5.0,
+      "throughput": 2.0
+    },
+    "metrics_after": {
+      "latency": 145.0,
+      "loss": 4.7,
+      "throughput": 2.0
+    }
+  },
+  {
+    "episode": 9,
+    "timestamp": "2026-04-13T18:51:54.609962",
+    "anomaly_type": "congestion",
+    "anomaly_score": 0.6743588641194254,
+    "action": "escalate",
+    "confidence": 0.0721,
+    "escalated": true,
+    "reward": -1.0,
+    "metrics_before": {
+      "latency": 30.0,
+      "loss": 2.5,
+      "throughput": 9.5
+    },
+    "metrics_after": {
+      "latency": 30.0,
+      "loss": 2.5,
+      "throughput": 9.5
+    }
+  },
+  {
+    "episode": 10,
+    "timestamp": "2026-04-13T18:51:54.624375",
+    "anomaly_type": "degradation",
+    "anomaly_score": 0.679607537581526,
+    "action": "traffic_shaping",
+    "confidence": 0.2515,
+    "escalated": true,
+    "reward": 5.12,
+    "metrics_before": {
+      "latency": 40.0,
+      "loss": 1.2,
+      "throughput": 7.5
+    },
+    "metrics_after": {
+      "latency": 35.0,
+      "loss": 0.9,
+      "throughput": 7.5
+    }
+  },
+  {
+    "episode": 11,
+    "timestamp": "2026-04-13T18:51:54.637857",
+    "anomaly_type": "link_failure",
+    "anomaly_score": 0.6723525503380431,
+    "action": "traffic_shaping",
+    "confidence": 1.0,
+    "escalated": false,
+    "reward": 5.12,
+    "metrics_before": {
+      "latency": 150.0,
+      "loss": 5.0,
+      "throughput": 2.0
+    },
+    "metrics_after": {
+      "latency": 145.0,
+      "loss": 4.7,
+      "throughput": 2.0
+    }
+  },
+  {
+    "episode": 12,
+    "timestamp": "2026-04-13T18:51:54.654687",
+    "anomaly_type": "congestion",
+    "anomaly_score": 0.6743588641194254,
+    "action": "traffic_shaping",
+    "confidence": 1.0,
+    "escalated": false,
+    "reward": 5.12,
+    "metrics_before": {
+      "latency": 30.0,
+      "loss": 2.5,
+      "throughput": 9.5
+    },
+    "metrics_after": {
+      "latency": 25.0,
+      "loss": 2.2,
+      "throughput": 9.5
+    }
+  },
+  {
+    "episode": 13,
+    "timestamp": "2026-04-13T18:51:54.677100",
+    "anomaly_type": "degradation",
+    "anomaly_score": 0.679607537581526,
+    "action": "traffic_shaping",
+    "confidence": 1.0,
+    "escalated": false,
+    "reward": 5.12,
+    "metrics_before": {
+      "latency": 40.0,
+      "loss": 1.2,
+      "throughput": 7.5
+    },
+    "metrics_after": {
+      "latency": 35.0,
+      "loss": 0.9,
+      "throughput": 7.5
+    }
+  },
+  {
+    "episode": 14,
+    "timestamp": "2026-04-13T18:51:54.691532",
+    "anomaly_type": "link_failure",
+    "anomaly_score": 0.6723525503380431,
+    "action": "traffic_shaping",
+    "confidence": 0.0817,
+    "escalated": true,
+    "reward": 5.12,
+    "metrics_before": {
+      "latency": 150.0,
+      "loss": 5.0,
+      "throughput": 2.0
+    },
+    "metrics_after": {
+      "latency": 145.0,
+      "loss": 4.7,
+      "throughput": 2.0
+    }
+  },
+  {
+    "episode": 15,
+    "timestamp": "2026-04-13T18:51:54.707828",
+    "anomaly_type": "congestion",
+    "anomaly_score": 0.6743588641194254,
+    "action": "traffic_shaping",
+    "confidence": 1.0,
+    "escalated": false,
+    "reward": 5.12,
+    "metrics_before": {
+      "latency": 30.0,
+      "loss": 2.5,
+      "throughput": 9.5
+    },
+    "metrics_after": {
+      "latency": 25.0,
+      "loss": 2.2,
+      "throughput": 9.5
+    }
+  },
+  {
+    "episode": 16,
+    "timestamp": "2026-04-13T18:51:54.728538",
+    "anomaly_type": "degradation",
+    "anomaly_score": 0.679607537581526,
+    "action": "traffic_shaping",
+    "confidence": 1.0,
+    "escalated": false,
+    "reward": 5.12,
+    "metrics_before": {
+      "latency": 40.0,
+      "loss": 1.2,
+      "throughput": 7.5
+    },
+    "metrics_after": {
+      "latency": 35.0,
+      "loss": 0.9,
+      "throughput": 7.5
+    }
+  },
+  {
+    "episode": 17,
+    "timestamp": "2026-04-13T18:51:54.741646",
+    "anomaly_type": "link_failure",
+    "anomaly_score": 0.6723525503380431,
+    "action": "traffic_shaping",
+    "confidence": 1.0,
+    "escalated": false,
+    "reward": 5.12,
+    "metrics_before": {
+      "latency": 150.0,
+      "loss": 5.0,
+      "throughput": 2.0
+    },
+    "metrics_after": {
+      "latency": 145.0,
+      "loss": 4.7,
+      "throughput": 2.0
+    }
+  },
+  {
+    "episode": 18,
+    "timestamp": "2026-04-13T18:51:54.763064",
+    "anomaly_type": "congestion",
+    "anomaly_score": 0.6743588641194254,
+    "action": "traffic_shaping",
+    "confidence": 1.0,
+    "escalated": false,
+    "reward": 5.12,
+    "metrics_before": {
+      "latency": 30.0,
+      "loss": 2.5,
+      "throughput": 9.5
+    },
+    "metrics_after": {
+      "latency": 25.0,
+      "loss": 2.2,
+      "throughput": 9.5
+    }
+  },
+  {
+    "episode": 19,
+    "timestamp": "2026-04-13T18:51:54.788281",
+    "anomaly_type": "degradation",
+    "anomaly_score": 0.679607537581526,
+    "action": "traffic_shaping",
+    "confidence": 1.0,
+    "escalated": false,
+    "reward": 5.12,
+    "metrics_before": {
+      "latency": 40.0,
+      "loss": 1.2,
+      "throughput": 7.5
+    },
+    "metrics_after": {
+      "latency": 35.0,
+      "loss": 0.9,
+      "throughput": 7.5
+    }
+  },
+  {
+    "episode": 20,
+    "timestamp": "2026-04-13T18:51:54.803954",
+    "anomaly_type": "link_failure",
+    "anomaly_score": 0.6723525503380431,
+    "action": "traffic_shaping",
+    "confidence": 1.0,
+    "escalated": false,
+    "reward": 5.12,
+    "metrics_before": {
+      "latency": 150.0,
+      "loss": 5.0,
+      "throughput": 2.0
+    },
+    "metrics_after": {
+      "latency": 145.0,
+      "loss": 4.7,
+      "throughput": 2.0
+    }
+  },
+  {
+    "episode": 21,
+    "timestamp": "2026-04-13T18:51:54.818430",
+    "anomaly_type": "congestion",
+    "anomaly_score": 0.6743588641194254,
+    "action": "escalate",
+    "confidence": 0.2979,
+    "escalated": true,
+    "reward": -1.0,
+    "metrics_before": {
+      "latency": 30.0,
+      "loss": 2.5,
+      "throughput": 9.5
+    },
+    "metrics_after": {
+      "latency": 30.0,
+      "loss": 2.5,
+      "throughput": 9.5
+    }
+  },
+  {
+    "episode": 22,
+    "timestamp": "2026-04-13T18:51:54.832273",
+    "anomaly_type": "degradation",
+    "anomaly_score": 0.679607537581526,
+    "action": "traffic_shaping",
+    "confidence": 1.0,
+    "escalated": false,
+    "reward": 5.12,
+    "metrics_before": {
+      "latency": 40.0,
+      "loss": 1.2,
+      "throughput": 7.5
+    },
+    "metrics_after": {
+      "latency": 35.0,
+      "loss": 0.9,
+      "throughput": 7.5
+    }
+  },
+  {
+    "episode": 23,
+    "timestamp": "2026-04-13T18:51:54.845635",
+    "anomaly_type": "link_failure",
+    "anomaly_score": 0.6723525503380431,
+    "action": "traffic_shaping",
+    "confidence": 0.0178,
+    "escalated": true,
+    "reward": 5.12,
+    "metrics_before": {
+      "latency": 150.0,
+      "loss": 5.0,
+      "throughput": 2.0
+    },
+    "metrics_after": {
+      "latency": 145.0,
+      "loss": 4.7,
+      "throughput": 2.0
+    }
+  },
+  {
+    "episode": 24,
+    "timestamp": "2026-04-13T18:51:54.862431",
+    "anomaly_type": "congestion",
+    "anomaly_score": 0.6743588641194254,
+    "action": "traffic_shaping",
+    "confidence": 1.0,
+    "escalated": false,
+    "reward": 5.12,
+    "metrics_before": {
+      "latency": 30.0,
+      "loss": 2.5,
+      "throughput": 9.5
+    },
+    "metrics_after": {
+      "latency": 25.0,
+      "loss": 2.2,
+      "throughput": 9.5
+    }
+  },
+  {
+    "episode": 25,
+    "timestamp": "2026-04-13T18:51:54.882802",
+    "anomaly_type": "degradation",
+    "anomaly_score": 0.679607537581526,
+    "action": "traffic_shaping",
+    "confidence": 1.0,
+    "escalated": false,
+    "reward": 5.12,
+    "metrics_before": {
+      "latency": 40.0,
+      "loss": 1.2,
+      "throughput": 7.5
+    },
+    "metrics_after": {
+      "latency": 35.0,
+      "loss": 0.9,
+      "throughput": 7.5
+    }
+  },
+  {
+    "episode": 26,
+    "timestamp": "2026-04-13T18:51:54.896045",
+    "anomaly_type": "link_failure",
+    "anomaly_score": 0.6723525503380431,
+    "action": "traffic_shaping",
+    "confidence": 0.0355,
+    "escalated": true,
+    "reward": 5.12,
+    "metrics_before": {
+      "latency": 150.0,
+      "loss": 5.0,
+      "throughput": 2.0
+    },
+    "metrics_after": {
+      "latency": 145.0,
+      "loss": 4.7,
+      "throughput": 2.0
+    }
+  },
+  {
+    "episode": 27,
+    "timestamp": "2026-04-13T18:51:54.911319",
+    "anomaly_type": "congestion",
+    "anomaly_score": 0.6743588641194254,
+    "action": "traffic_shaping",
+    "confidence": 1.0,
+    "escalated": false,
+    "reward": 5.12,
+    "metrics_before": {
+      "latency": 30.0,
+      "loss": 2.5,
+      "throughput": 9.5
+    },
+    "metrics_after": {
+      "latency": 25.0,
+      "loss": 2.2,
+      "throughput": 9.5
+    }
+  },
+  {
+    "episode": 28,
+    "timestamp": "2026-04-13T18:51:54.926557",
+    "anomaly_type": "degradation",
+    "anomaly_score": 0.679607537581526,
+    "action": "traffic_shaping",
+    "confidence": 1.0,
+    "escalated": false,
+    "reward": 5.12,
+    "metrics_before": {
+      "latency": 40.0,
+      "loss": 1.2,
+      "throughput": 7.5
+    },
+    "metrics_after": {
+      "latency": 35.0,
+      "loss": 0.9,
+      "throughput": 7.5
+    }
+  },
+  {
+    "episode": 29,
+    "timestamp": "2026-04-13T18:51:54.941275",
+    "anomaly_type": "link_failure",
+    "anomaly_score": 0.6723525503380431,
+    "action": "throttle",
+    "confidence": 0.1196,
+    "escalated": true,
+    "reward": 9.45,
+    "metrics_before": {
+      "latency": 150.0,
+      "loss": 5.0,
+      "throughput": 2.0
+    },
+    "metrics_after": {
+      "latency": 140.0,
+      "loss": 4.0,
+      "throughput": 1.0
+    }
+  }
+]
