@@ -13,7 +13,6 @@ st_autorefresh(interval=2000, key="data_refresh")
 
 st.title("NeuroNet AI Decision Engine")
 st.markdown("Live telemetry and reinforcement learning action log.")
-
 # --- Live Mode Button ---
 st.sidebar.header("Controls")
 if st.sidebar.button("Run Simulation", type="primary"):
