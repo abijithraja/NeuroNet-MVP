@@ -1,8 +1,39 @@
-import streamlit as st
 import json
 import subprocess
 import sys
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+SIMULATION_FILE = BASE_DIR / "main_simulation.py"
+DECISION_LOG_FILE = BASE_DIR / "decision_log.json"
+
+
+def _is_streamlit_runtime() -> bool:
+    return any(
+        name.startswith("streamlit.runtime.scriptrunner") or name.startswith("streamlit.web")
+        for name in sys.modules
+    )
+
+
+# If users run "python app.py", relaunch correctly in Streamlit mode.
+if __name__ == "__main__" and "--from-streamlit" not in sys.argv and not _is_streamlit_runtime():
+    subprocess.run(
+        [
+            sys.executable,
+            "-m",
+            "streamlit",
+            "run",
+            str(BASE_DIR / "app.py"),
+            "--",
+            "--from-streamlit",
+        ],
+        cwd=str(BASE_DIR),
+        check=False,
+    )
+    raise SystemExit(0)
+
 import pandas as pd
+import streamlit as st
 from streamlit_autorefresh import st_autorefresh
 
 # 1. Page Config
@@ -17,8 +48,15 @@ st.markdown("Live telemetry and reinforcement learning action log.")
 st.sidebar.header("Controls")
 if st.sidebar.button("Run Simulation", type="primary"):
     with st.spinner("Running AI simulation..."):
-        subprocess.run([sys.executable, "main_simulation.py"], cwd=".")
-    st.success("Simulation complete! Dashboard will refresh automatically.")
+        try:
+            subprocess.run(
+                [sys.executable, str(SIMULATION_FILE)],
+                cwd=str(BASE_DIR),
+                check=True,
+            )
+            st.success("Simulation complete! Dashboard will refresh automatically.")
+        except subprocess.CalledProcessError as exc:
+            st.error(f"Simulation failed with exit code {exc.returncode}.")
 
 st.sidebar.divider()
 
@@ -37,7 +75,7 @@ st.sidebar.markdown(
 
 try:
     # 2. Load the data from your MVP run
-    with open("decision_log.json") as f:
+    with DECISION_LOG_FILE.open() as f:
         data = json.load(f)
     
     df = pd.DataFrame(data)
@@ -102,7 +140,7 @@ try:
 
     st.dataframe(
         filtered_df[["episode", "action", "confidence", "escalated", "reward", "Latency Improvement (ms)"]],
-        use_container_width=True
+        width="stretch"
     )
 
     st.divider()
@@ -116,7 +154,7 @@ try:
         color = '#ff4b4b' if val else '#00c04b'
         return f'background-color: {color}'
     
-    st.dataframe(clean_df.style.map(highlight_status, subset=['escalated']), use_container_width=True)
+    st.dataframe(clean_df.style.map(highlight_status, subset=['escalated']), width="stretch")
 
 except FileNotFoundError:
     st.warning("No decision_log.json found. Click 'Run Simulation' in the sidebar to generate data.")

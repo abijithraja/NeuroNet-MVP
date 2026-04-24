@@ -1,6 +1,7 @@
 import json
 import os
 import numpy as np
+from pathlib import Path
 from datetime import datetime
 
 from telemetry_emulator import NetworkTelemetry
@@ -13,6 +14,7 @@ from rich.table import Table
 from rich.panel import Panel
 
 console = Console()
+BASE_DIR = Path(__file__).resolve().parent
 
 ACTION_NAMES   = ['reroute', 'qos_adjust', 'scale_slice', 'throttle',
                   'traffic_shaping', 'failover', 'escalate', 'monitor']
@@ -173,10 +175,10 @@ def main():
               f"({100*escalated/max(len(results[t]),1):.0f}%)\n")
 
     # --- Step 5: save outputs ---
-    with open('decision_log.json', 'w') as f:
+    with (BASE_DIR / 'decision_log.json').open('w') as f:
         json.dump(sim.decision_log, f, indent=2)
-    os.makedirs('models', exist_ok=True)
-    sim.agent.save('models/pretrained_dqn.pt')
+    os.makedirs(BASE_DIR / 'models', exist_ok=True)
+    sim.agent.save(str(BASE_DIR / 'models' / 'pretrained_dqn.pt'))
     print("[OK] decision_log.json saved")
     print("[OK] models/pretrained_dqn.pt saved")
     print("[OK] Simulation complete")
